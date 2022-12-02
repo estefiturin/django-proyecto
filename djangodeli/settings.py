@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-
+from django.urls import reverse_lazy
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-01u85d8a#p^v*+xn=qv+iku1!k^a^f(w+de8*@&0$av#-9q^+p
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ["eititur.pythonanywhere.com"]
+ALLOWED_HOSTS = [""]
 LOGIN_REDIRECT_URL = '/inventario/balancesheet'
 LOGIN_URL = '/account/login/'
 LOGOUT_URL = reverse_lazy('logout')
