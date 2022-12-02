@@ -1,0 +1,14 @@
+{% extends './base.html' %}
+{% block content %}
+<nav class="navbar">
+<a class="nav-item" href="{% url 'balancesheet' %}"><h3>BALANCE SHEET</h3></a>
+<a class="nav-item" href="{% url 'menu' %}"><h3>MENU ITEMS</h3></a>
+<a class="nav-item" href="{% url 'inventory' %}"><h3>INVENTORY</h3></a>
+<a class="nav-item" href="{% url 'purchases' %}"><h3>PURCHASES</h3></a>
+</nav>
+<h3>PURCHASE CONFIRMATION</h3>
+<p>{{purchase.menuitem}} purchased on {{purchase.date}}</p>
+<p>&nbsp;</p>
+
+{{ block.super }}
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends './base.html' %}
+{% block content %}
+<h2>Add Ingredient to Menu Item</h2>
+<form method="post">
+    {% csrf_token %}
+  <div class="actionpanel">
+    {{ form.as_p }}
+    <input type="submit" value="add" onclick="history.back()" />
+    <input type="button" value="back" onclick="history.back()">
+
+  </div>
+</form>
+{{ block.super }}
+{% endblock %}

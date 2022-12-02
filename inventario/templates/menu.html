@@ -1,0 +1,42 @@
+{% extends './home.html' %}
+{% block content %}
+{{ block.super }}
+<h3>MENU</h3>
+    <table class="line-table">
+        <thead>
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>price</th>
+    <th>cost</th>
+  </tr>
+</thead>
+<tbody>
+{% for item in menuitems %}
+  <tr>
+    <td>{{ item.id }}</td><td>{{ item.title }}</td><td>${{ item.price }}</td><td>${{item.sum_recipe_prices}}</td>
+    <tr>
+        <td>ingredients:</td>
+    </tr>
+    {% for row in item.reciperequirement_set.all %}
+    <tr>
+        <td>&nbsp;</td><td>{{row.ingredient.name}} </td><td>{{row.quantity}} {{row.ingredient.unit}} </td>
+        <!-- <td>cost {{ row.ingredient_cost }}</td> -->
+    </tr>
+        {% endfor %}
+        <tr>
+            <td colspan="4"><hr></td>
+        </tr>
+
+{% endfor %}
+</tbody>
+    </table>
+
+<div class="actionpanel">
+        <a href="{% url "add_menu_item" %}">add menu item</a></td>
+
+        <a href="{% url "create_recipe" %}">add recipe  requirement</a></td>
+</div>
+
+{% endblock %}
+

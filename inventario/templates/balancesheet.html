@@ -1,0 +1,25 @@
+{% extends './home.html' %}
+
+{% block content %}
+{{ block.super }}
+<h3>BALANCE SHEET</h3>
+
+<table>
+    <thead></thead>
+    <tbody>
+        <tr class="total">
+            <td>total sales:</td><td>${{totalsales}}</td>
+        </tr>
+        <tr class="total">
+            <td>total cost:</td><td>${{totalcost}}</td>
+        </tr>
+        <tr class="total">
+            <td>profit</td><td>${{profitorloss}}</td>
+        </tr>
+    </tbody>
+    
+</table>
+<div class="logout">
+    <a href="{% url "logout"  %}">Cerrar Sesión</a>
+</div>
+{% endblock %} 

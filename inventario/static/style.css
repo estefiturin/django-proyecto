@@ -1,0 +1,151 @@
+.app{
+    background-color: #FFF;
+    max-width: 500px;
+    margin: 1em auto;
+    padding: 0;
+    padding-bottom: 50px;
+    border-radius: 18px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+}
+
+hr{
+    height: 0.2em;
+    background: #5F73B8;
+}
+
+body{
+    font-family: "Oxygen", sans-serif;
+    text-align: center;
+    margin: 0 20px 0 20px;
+}
+
+
+.navbar{
+    margin-top: 0.25em auto;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 0;
+    color: #5F73B8;
+
+}
+
+.navbar a:hover{
+    border-bottom: solid 4px #5F73B8;
+    font-weight: bold;
+}
+
+.title{
+    font-size: 3em;
+    padding: 0px 50px 0 20px;
+    margin: auto 0;
+    color: #3a10e5;
+}
+
+table.line-table, table.button-table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.line-table th, .button-table th{
+    padding: 0 32px 0 0;
+    text-align: left;
+}
+
+thead{
+    text-decoration: underline;
+}
+
+.line-table td, .line-table th,
+.button-table td, .button-table th{
+    text-align: left;
+}
+
+.total tr{
+    font-weight: bolder;
+
+}
+
+.button-table td{
+    padding: 6px 1px;
+}
+
+.line-table ul{
+    padding: 0;
+}
+
+table{
+    padding-left: 177px
+}
+
+
+.total tr td{
+    align-items: initial;
+}
+
+form.login{
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+input, select{
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: #FFF;
+    background-color: #5F73B8;
+}
+
+.actionpanel, .logout{
+    max-width: 40%;
+    margin: 1em auto 1em;
+}
+
+.actionpanel a, .logout a{
+    display: inherit;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #FFF;
+    padding: 5px;
+    margin-bottom: 0.5em;
+    background-color: #5F73B8;
+}
+
+ul { 
+    list-style: none;
+}
+
+.line-table li{
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    line-height: 2em;
+    border-radius: 1em;
+    background: dodgerblue;
+    margin: 0 1em;
+    display: inline-block;
+    color: white;
+    position: relative;
+}
+
+.tinybutton a{
+    text-decoration: none;
+    border-radius: 6px;
+    color: #FFF;
+    padding: 2px 2px 3px 2px;
+    background-color: #5F73B8;
+    margin-bottom: 6px;
+}
+
+td.tinybutton{
+    padding-left: 0.5em;
+}

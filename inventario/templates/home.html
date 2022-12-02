@@ -1,0 +1,14 @@
+{% extends './base.html' %}
+
+{% block content %}
+
+<nav class="navbar">
+    <a href="{% url 'balancesheet' %}"> BALANCE SHEET</a>
+    <a href="{% url 'menu' %}"> MENU ITEMS </a>
+    <a href="{% url 'inventory' %}">INVENTORY</a>
+    <a href="{% url 'purchases' %}">PURCHASES</a>
+</nav>
+
+{{block.super}}
+{% endblock %}
+

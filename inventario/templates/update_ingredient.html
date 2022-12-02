@@ -1,0 +1,14 @@
+{% extends './base.html' %}
+{% block content %}
+<h2>update Ingredient {{ view.kwargs.pk }}</h2>
+<form method="post">
+    {% csrf_token %}
+  <div class="actionpanel">
+    {{ form.as_p }}
+    <input type="submit" value="update" onclick="history.back()"/>
+    <input type="button" value="cancel" onclick="history.back()">
+
+  </div>
+</form>
+{{ block.super }}
+{% endblock %}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+        <title></title>
+    </head>
+        <body>
+            <div class="app">
+            <img class="app" src="{% static 'head.png' %}" alt="DJD logo">                <h2>Iniciar Sesión</h2>
+                <form class="login" method="post">
+                    {% csrf_token %}
+                    <p>
+                        <label for="id_username">Usuario:</label>
+                        <input id="id_username" type="text" name="username" autofocus="" autocapitalize="none"
+                        autocomplete="username" maxlenght="20" required=""> 
+                    </p>
+                    <p>
+                        <label for="id_password">Contraseña</label>
+                        <input id="id_password" type="password" name="password" autocomplete="current-password" required="">
+                    </p>
+                    <input type="submit" value="Login"/>
+                </form>
+            </div>
+        </body>
+</html>

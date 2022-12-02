@@ -1,0 +1,30 @@
+{% extends './home.html' %}
+{% block content %}
+{{ block.super }}
+<!-- <h3>PURCHASES CONTENT HERE</h3> -->
+    <table class="line-table">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>menu item</th>
+                <th>date</th>
+                <th>price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in purchases %}
+            <tr>
+                <td>{{item.id}}</td><td>{{item.menuitem}}</td>
+                <td>{{item.date}}</td>
+                <td>${{item.menuitem.sum_recipe_prices}}</td>
+            <tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+<div class="actionpanel">
+
+
+<a href="{% url "create_purchase"  %}">add purchase</a>
+</div>
+{% endblock %}
